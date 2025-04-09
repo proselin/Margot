@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {LayoutComponent} from './shared/components/layout/layout.component';
 
 @Component({
   selector: 'mgr-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet, LayoutComponent],
+  template: `
+    <mgr-layout>
+      <router-outlet></router-outlet>
+    </mgr-layout>`,
+  standalone: true
 })
 export class AppComponent {
-  title = 'margiet';
+  title = 'Margiet';
 }
