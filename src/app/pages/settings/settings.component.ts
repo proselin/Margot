@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {BasePagesComponent} from '../../common/components';
 
 @Component({
   selector: 'mgr-settings',
@@ -8,6 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone : true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SettingsComponent {
+export class SettingsComponent extends BasePagesComponent{
 
 }

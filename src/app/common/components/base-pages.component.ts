@@ -1,3 +1,10 @@
 import { BaseComponent } from "./base.component";
+import {Directive, OnInit} from '@angular/core';
 
-export abstract class BasePagesComponent extends BaseComponent { }
+@Directive()
+export abstract class BasePagesComponent extends BaseComponent implements OnInit {
+    ngOnInit() {
+      this.tauriService.sayHello().subscribe();
+      this.tauriService.check().subscribe();
+    }
+}

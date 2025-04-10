@@ -1,16 +1,13 @@
-import { Directive } from "@angular/core";
+import {Directive, inject} from "@angular/core";
+import {NzNotificationService} from 'ng-zorro-antd/notification';
+import {NzMessageService} from 'ng-zorro-antd/message';
+import {LoadingGlobalService} from '../../shared/services/loading';
+import {TauriService} from '../services/tauri.service';
 
 @Directive()
 export abstract class BaseComponent {
-  constructor() {
-    // This is a base class for components
-  }
-
-  ngOnInit() {
-    // This method is called when the component is initialized
-  }
-
-  ngOnDestroy() {
-    // This method is called when the component is destroyed
-  }
+  protected readonly notificationService = inject(NzNotificationService)
+  protected readonly messageService = inject(NzMessageService);
+  protected readonly loadingGlobalService = inject(LoadingGlobalService);
+  protected readonly tauriService = inject(TauriService);
 }

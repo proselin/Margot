@@ -1,8 +1,12 @@
 <nz-header>
-  <div class="logo"></div>
+  <a [routerLink]="'/'">
+    <div class="logo">
+
+    </div>
+  </a>
   <ul nz-menu nzTheme="dark" nzMode="horizontal">
-    <li nz-menu-item>nav 1</li>
-    <li nz-menu-item>nav 2</li>
-    <li nz-menu-item>nav 3</li>
+    @for (route of routes; track route.path) {
+      <li nz-menu-item nzMatchRouter><a [routerLink]="route.path" [routerLinkActive]="'active'"></a>{{route?.title}}</li>
+    }
   </ul>
 </nz-header>

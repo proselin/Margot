@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {BasePagesComponent} from '../../common/components';
 
 @Component({
   selector: 'mgr-comic',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './comic.component.html',
   styleUrl: './comic.component.scss'
 })
-export class ComicComponent {
+export class ComicComponent  extends BasePagesComponent{
 
 }

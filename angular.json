@@ -10,7 +10,26 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "prefix": "mgr",
+          "changeDetection": "OnPush",
+          "standalone": true
+        },
+        "@schematics/angular:directive": {
+          "prefix": "mgr",
+          "standalone": true
+        },
+        "@schematics/angular:service": {
+          "prefix": "mgr",
+          "standalone": true
+        },
+        "@schematics/angular:pipe": {
+          "prefix": "mgr",
+          "standalone": true
+        },
+        "@schematics/angular:guard": {
+          "prefix": "mgr",
+          "standalone": true
         }
       },
       "root": "",
@@ -50,8 +69,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",

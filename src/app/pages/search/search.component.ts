@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {BasePagesComponent} from '../../common/components';
 
 @Component({
   selector: 'mgr-search',
@@ -8,6 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone : true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SearchComponent {
+export class SearchComponent extends BasePagesComponent{
 
 }
