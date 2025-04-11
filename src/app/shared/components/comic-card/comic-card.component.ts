@@ -3,6 +3,7 @@ import {RouterLink} from '@angular/router';
 import {ComicInfo} from '../../models/types/comic-info';
 import {NgIf, NgOptimizedImage} from '@angular/common';
 import {NzSkeletonComponent} from 'ng-zorro-antd/skeleton';
+import {BaseComponent} from '../../../common/components';
 
 @Component({
   selector: 'mgr-comic-card',
@@ -17,7 +18,7 @@ import {NzSkeletonComponent} from 'ng-zorro-antd/skeleton';
   standalone : true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ComicCardComponent {
+export class ComicCardComponent extends BaseComponent {
 
   @Input({required: true}) comicInfo!: ComicInfo
 

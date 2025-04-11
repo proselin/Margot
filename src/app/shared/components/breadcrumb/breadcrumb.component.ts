@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NzBreadCrumbComponent, NzBreadCrumbItemComponent } from 'ng-zorro-antd/breadcrumb';
+import {BaseComponent} from '../../../common/components';
 
 @Component({
   selector: 'mgr-breadcrumb',
@@ -9,6 +10,6 @@ import { NzBreadCrumbComponent, NzBreadCrumbItemComponent } from 'ng-zorro-antd/
   standalone : true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BreadcrumbComponent {
+export class BreadcrumbComponent extends BaseComponent {
 
 }

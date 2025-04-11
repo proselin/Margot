@@ -1,13 +1,14 @@
 import {inject, Injectable} from '@angular/core';
 import {invoke} from '@tauri-apps/api/core';
 import {from, tap} from 'rxjs';
-import {LoadingGlobalService} from '../../shared/services/loading';
+import {LoadingGlobalService} from '../../../shared/services/loading';
+import { TauriService } from './tauri.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class TauriService {
+export class TauriImplService implements TauriService     {
   private readonly loadingGlobalService = inject(LoadingGlobalService);
 
   sayHello() {

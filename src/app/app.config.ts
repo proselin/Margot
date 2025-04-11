@@ -8,8 +8,7 @@ import en from '@angular/common/locales/en';
 import {FormsModule} from '@angular/forms';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {provideHttpClient} from '@angular/common/http';
-import {LoadingGlobalService} from './shared/services/loading';
-import {TauriService} from './common/services/tauri.service';
+import {provideTauri} from './common/services/tauri';
 
 registerLocaleData(en);
 
@@ -21,9 +20,5 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(FormsModule),
     provideAnimationsAsync(),
     provideHttpClient(),
-    //Services
-    LoadingGlobalService,
-    TauriService
-
   ],
 };
